@@ -8,6 +8,7 @@ import com.example.innoventes.api.NetworkInterface
 import com.example.innoventes.api.UiState
 import com.example.innoventes.model.PanCardRequestModel
 import com.example.innoventes.model.PanCardResponseModel
+import com.example.innoventes.utils.DateUtils
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.regex.Matcher
@@ -60,6 +61,12 @@ class PanCardViewModel @Inject constructor(private val networkInterface: Network
             validationListener?.onFailure(R.string.year_error)
             return
         }
+        val dateStr = "$date/$month/$year"
+        if(DateUtils.isValidDate(dateStr)){
+            validationListener?.onFailure(R.string.valid_date_error)
+            return
+        }
+
         validationListener?.onSuccess()
 
     }
