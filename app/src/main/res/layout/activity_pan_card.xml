@@ -82,12 +82,14 @@
             android:layout_height="@dimen/dp_50"
             android:layout_marginTop="@dimen/dp_10"
             android:background="@drawable/bg_date"
+            android:gravity="center"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:maxLength="2"
             android:singleLine="true"
             app:layout_constraintStart_toStartOf="@+id/label_birthdate"
-            app:layout_constraintTop_toBottomOf="@+id/label_birthdate" />
+            app:layout_constraintTop_toBottomOf="@+id/label_birthdate"
+            tools:text="1" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edt_month"
@@ -95,6 +97,7 @@
             android:layout_height="@dimen/dp_50"
             android:layout_marginTop="@dimen/dp_10"
             android:background="@drawable/bg_date"
+            android:gravity="center"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:maxLength="2"
@@ -110,6 +113,7 @@
             android:layout_marginTop="@dimen/dp_10"
             android:layout_marginEnd="@dimen/dp_40"
             android:background="@drawable/bg_date"
+            android:gravity="center"
             android:imeOptions="actionDone"
             android:inputType="number"
             android:maxLength="4"

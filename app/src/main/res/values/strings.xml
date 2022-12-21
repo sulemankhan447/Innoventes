@@ -6,4 +6,8 @@
     <string name="birthdate">BirthDate</string>
     <string name="i_don_t_have_a_pan">I don\'t have a PAN</string>
     <string name="next">Next</string>
+    <string name="pan_error">Please enter valid PAN</string>
+    <string name="date_error">Please enter valid date</string>
+    <string name="month_error">Please enter valid month</string>
+    <string name="year_error">Please enter valid year</string>
 </resources>

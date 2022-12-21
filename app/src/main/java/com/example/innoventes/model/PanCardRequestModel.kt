@@ -2,9 +2,9 @@ package com.example.innoventes.model
 
 data class PanCardRequestModel(
     var panCard: String? = "",
-    var date: String? = "",
-    var month: String? = "",
-    var year: String? = ""
+    var date: Int? = 0,
+    var month: Int? = 0,
+    var year: Int? = 0
 )
 
 
