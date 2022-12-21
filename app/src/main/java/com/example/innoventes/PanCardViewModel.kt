@@ -4,8 +4,6 @@ import android.text.TextUtils
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.innoventes.*
-import com.example.innoventes.`interface`.ValidationListener
 import com.example.innoventes.api.NetworkInterface
 import com.example.innoventes.api.UiState
 import com.example.innoventes.model.PanCardRequestModel

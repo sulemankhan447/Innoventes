@@ -5,14 +5,11 @@ import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.innoventes.`interface`.ValidationListener
 import com.example.innoventes.api.UiState
 import com.example.innoventes.base.BaseApplication
 import com.example.innoventes.databinding.ActivityPanCardBinding
 import com.example.innoventes.model.PanCardRequestModel
-import com.example.innoventes.model.PanCardResponseModel
 import javax.inject.Inject
 
 class PanCardActivity : AppCompatActivity(), ValidationListener {
@@ -52,7 +49,9 @@ class PanCardActivity : AppCompatActivity(), ValidationListener {
                         Toast.LENGTH_LONG
                     ).show()
                 }
-                is UiState.Error -> hideLoader()
+                is UiState.Error -> {
+                    hideLoader()
+                }
             }
         }
     }
