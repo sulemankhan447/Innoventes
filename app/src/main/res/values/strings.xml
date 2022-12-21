@@ -10,5 +10,5 @@
     <string name="date_error">Please enter valid date</string>
     <string name="month_error">Please enter valid month</string>
     <string name="year_error">Please enter valid year</string>
-    <string name="valid_date_error">Please enter valid date</string>
+    <string name="valid_date_error">Please enter valid details for birth date</string>
 </resources>
