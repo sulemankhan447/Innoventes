@@ -62,7 +62,7 @@ class PanCardViewModel @Inject constructor(private val networkInterface: Network
             return
         }
         val dateStr = "$date/$month/$year"
-        if(DateUtils.isValidDate(dateStr)){
+        if(DateUtils.isValidDate(dateStr).not()){
             validationListener?.onFailure(R.string.valid_date_error)
             return
         }
