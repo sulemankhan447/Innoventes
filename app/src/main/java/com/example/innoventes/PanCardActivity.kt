@@ -2,6 +2,7 @@ package com.example.innoventes
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -58,10 +59,11 @@ class PanCardActivity : AppCompatActivity(), ValidationListener {
     }
 
     private fun hideLoader() {
-
+        mBinding.progressBar.visibility = View.GONE
     }
 
     private fun showLoader() {
+        mBinding.progressBar.visibility = View.VISIBLE
 
     }
 

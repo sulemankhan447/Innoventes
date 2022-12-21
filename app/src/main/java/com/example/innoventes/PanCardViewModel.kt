@@ -8,6 +8,7 @@ import com.example.innoventes.api.NetworkInterface
 import com.example.innoventes.api.UiState
 import com.example.innoventes.model.PanCardRequestModel
 import com.example.innoventes.model.PanCardResponseModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -68,6 +69,7 @@ class PanCardViewModel @Inject constructor(private val networkInterface: Network
         uiState.value = UiState.Loading()
         viewModelScope.launch {
             try {
+                delay(1000)
                 val response = networkInterface.submitPanCardDetails(request)
                 uiState.value = UiState.Success(response.body())
 
