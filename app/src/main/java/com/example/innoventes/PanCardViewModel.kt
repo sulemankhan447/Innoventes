@@ -48,16 +48,16 @@ class PanCardViewModel @Inject constructor(private val networkInterface: Network
             return
         }
 
-        if (date < 0) {
+        if (date <= 0) {
             validationListener?.onFailure(R.string.date_error)
             return
         }
 
-        if (month < 0 || month > 12) {
+        if (month <= 0 || month > 12) {
             validationListener?.onFailure(R.string.month_error)
             return
         }
-        if (year < 0) {
+        if (year <= 0) {
             validationListener?.onFailure(R.string.year_error)
             return
         }
