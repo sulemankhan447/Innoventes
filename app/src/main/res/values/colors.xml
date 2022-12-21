@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="label_s">#EA6350</color>
+    <color name="subtitle">#0A0A0A</color>
+    <color name="pan_card">#AAAAAA</color>
+    <color name="date">#CAC5C5</color>
+    <color name="dont_have_pan_color">#6142B0</color>
+    <color name="next_btn">#6041B0</color>
 </resources>

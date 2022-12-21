@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Innoventes</string>
+    <string name="label_s">S.</string>
+    <string name="first_of_the_few_steps_to_set_nyou_up_with_a_bank_account">First of the few steps to set\nyou up with a Bank Account</string>
+    <string name="pan_number">Pan Number</string>
+    <string name="birthdate">BirthDate</string>
+    <string name="i_don_t_have_a_pan">I don\'t have a PAN</string>
+    <string name="next">Next</string>
 </resources>

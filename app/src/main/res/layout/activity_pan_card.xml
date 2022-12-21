@@ -1,18 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PanCardActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PanCardActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/label_s"
+            android:textColor="@color/label_s"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/first_of_the_few_steps_to_set_nyou_up_with_a_bank_account"
+            android:textColor="@color/subtitle"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_s"
+
+
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_pancard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/pan_number"
+            android:textColor="@color/pan_card"
+            app:layout_constraintStart_toStartOf="@+id/label_subheading"
+            app:layout_constraintTop_toBottomOf="@+id/label_subheading"
+            app:textAllCaps="true" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_pancard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:imeOptions="actionNext"
+            android:maxLength="10"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@+id/label_pancard" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_birthdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/birthdate"
+            android:textColor="@color/pan_card"
+            app:layout_constraintStart_toStartOf="@+id/label_subheading"
+            app:layout_constraintTop_toBottomOf="@+id/edt_pancard"
+            app:textAllCaps="true" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_date"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_date"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/label_birthdate"
+            app:layout_constraintTop_toBottomOf="@+id/label_birthdate" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_month"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_date"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@+id/edt_year"
+            app:layout_constraintStart_toEndOf="@+id/edt_date"
+            app:layout_constraintTop_toBottomOf="@+id/label_birthdate" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_year"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/bg_date"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_birthdate" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="Providing PAN &amp; Date of Birth hels us find and\nfetch your KYC from a central registry by the\nGovernment of India.Learn more "
+            android:textColor="@color/date"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnNext"
+            app:layout_constraintEnd_toEndOf="@id/btnNext"
+            app:layout_constraintStart_toStartOf="@+id/btnNext" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@drawable/bg_next"
+            android:gravity="center"
+            android:padding="@dimen/dp_14"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/label_dont_have_pan"
+            app:textAllCaps="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_dont_have_pan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:text="@string/i_don_t_have_a_pan"
+            android:textColor="@color/dont_have_pan_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
