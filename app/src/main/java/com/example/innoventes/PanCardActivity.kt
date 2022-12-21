@@ -51,6 +51,7 @@ class PanCardActivity : AppCompatActivity(), ValidationListener {
                 }
                 is UiState.Error -> {
                     hideLoader()
+                    Toast.makeText(this,"Failed to submit pan card details, Please try after sometime",Toast.LENGTH_LONG).show()
                 }
             }
         }
